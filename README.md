@@ -1,0 +1,2 @@
+# ISTA420
+This course introduces the key components of SQL including tables, indexes, data integrity, managed code, XML, and functions. The SQL components are applied using APIs in order to support the development of applications that interact with SQL servers. This course is part of a set of five related ISTA courses that make up the Cloud Applications Developer specialization's technical content.
