@@ -1,0 +1,54 @@
+--Final Exam Q17. return top 10 orders from OD with total value > 10k sorted. TSQLV4
+
+select top(10) *, (qty*unitprice) as TotalValue
+from sales.OrderDetails
+where (qty*unitprice) > 10000
+order by totalvalue desc;
+
+--Final Exam Q18. select custname, employee name, qty for all orders to argentia. order by qty. Northwind
+
+SELECT CompanyName, FirstName, LastName, Quantity
+FROM Orders as O
+inner join Customers as C on O.CustomerID = C.CustomerID
+inner join Employees as E on O.EmployeeID = E.EmployeeID
+inner join [Order Details] as OD on O.OrderID = OD.OrderID
+WHERE ShipCountry = 'Argentina'
+Order by Quantity;
+
+--Final Exam Q19. retrieve companyname, country, orders. Use subquery. Northwind
+
+SELECT top(10) CompanyName, Country, UnitsInStock as Orders
+FROM Orders as o
+Inner Join Customers as c on 
+o.CustomerID = c.CustomerID
+Inner Join [Order Details] as od on
+o.OrderID = od.OrderID
+Inner Join Products as p on
+p.ProductID = od.ProductID
+where Quantity =
+(select Quantity from [Order Details] where Quantity < 31);
+
+--Final Exam Q20. PetCare DB. create view allMyDog. add new owner to owner table
+
+drop view allMyDog;
+
+create view allMyDog as
+select *
+from dbo.Pets
+where PetSpeciesID = 1;
+
+INSERT INTO Owner
+VALUES(333, 'WAYNE', 'John', 'jw@hotmail.com' ,'121-999-0909', 'Famous Actor');
+
+select * from allMyDog
+order by PetID;
+select * from Owner;
+
+Alter View allMyDog
+AS
+SELECT
+LastName, FirstName, email, mobile, notes
+FROM Owner
+WHERE LastName = 'WAYNE'
+order by mobile;
+

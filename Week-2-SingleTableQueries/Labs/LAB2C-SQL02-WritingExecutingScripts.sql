@@ -1,0 +1,12 @@
+SELECT RegionDescription FROM Region;
+SELECT DISTINCT territorydescription FROM territories;
+SELECT DISTINCT territorydescription FROM territories WHERE RegionID = '4';
+SELECT DISTINCT territorydescription FROM dbo.Territories WHERE RegionID = '4';
+SELECT DISTINCT territorydescription AS [Southern Cities] FROM dbo.territories WHERE RegionID = '4';
+SELECT ContactName, Phone, City FROM Customers;
+SELECT ProductName, UnitsInStock FROM Products WHERE UnitsInStock = 0;
+SELECT TOP (10) ProductName, UnitsInStock FROM Products WHERE UnitsInStock > 0 ORDER BY UnitsInStock;
+SELECT TOP (5) ProductName, UnitPrice FROM Products ORDER BY UnitPrice DESC;
+SELECT COUNT(*) AS TotProducts FROM Products;
+SELECT COUNT(*) AS TotCustomers FROM Customers;
+SELECT COUNT(*) AS TotSuppliers FROM Suppliers;

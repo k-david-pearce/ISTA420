@@ -1,0 +1,10 @@
+SELECT CustomerID, CompanyName, Country FROM Customers WHERE Country IN ('Canada', 'Mexico', 'USA') ORDER BY  Country;
+SELECT * FROM Orders where MONTH (OrderDate) = 4 AND YEAR (OrderDate) = 1998 ORDER BY OrderDate;
+SELECT ProductName from products WHERE ProductName LIKE ('%sauce%');
+SELECT ProductName from products WHERE ProductName LIKE ('%dried%');
+SELECT * FROM Orders WHERE ShipCountry = 'Germany' AND month(OrderDate) = 12;
+SELECT Sum(UnitPrice*Quantity) as TotalAmount, Sum(unitprice*quantity-discount) as NetAmount FROM [Order Details] WHERE ProductID = 19 AND discount != 0;
+SELECT firstname + ' ' + lastname + char(13) + title + char(13) + '______________' + char(10) from [dbo].[Employees];
+SELECT companyname, LEFT([ContactName], CHARINDEX(' ', [ContactName] + ' ')-1) AS FIRST_NAME from Customers;
+SELECT SUBSTRING(contactname, CHARINDEX(' ', contactname) + 1, LEN(contactname)) AS LastName from Customers ORDER BY LastName ASC;
+SELECT Datediff(day,'08-14-1986', GETDATE()) AS [Days Old Today];

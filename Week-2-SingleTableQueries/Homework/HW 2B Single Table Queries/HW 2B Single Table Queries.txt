@@ -1,0 +1,21 @@
+This set of questions to answer, problems to solve, or issues to investigate based on this assigned reading.
+This reading (plus other coursework you've done up till now) should provide you everything you'll need to 
+know to be able to develop and support good, solid answers to the assigned problems.
+
+1. FILTERING STRATEGIES.  Quite often you have to "down-select" from a large set of data items to then do 
+further processing (including further filtering).  What kind of tools, techniques, or strategies can you 
+apply to do this? Do they all work equally well, or do some have shortcomings or "hidden side-effects" you 
+should consider when choosing which way to filter?
+ 
+2. DATA TYPES. What is a "data type?"  Why do we need to "type" a field?  How does our use of data types 
+in SQL database queries and statements differ from the way we use them in programming (in C#, for example)?  What special considerations do you need when mixing types? What other "oddities" might occur?
+ 
+3. CONSTRAINTS.  What are they, and how do we use them? What purposes do they serve? If you're working in 
+a database or file system environment that does not implement constraints as SQL does, can you "do it 
+yourself?" How?  And would that work as effectively as a "proper SQL" approach would? Why or why not?
+ 
+4. FUNCTIONS.  In algebra, we talk a lot about functions, which are defined ways of expressing a concept 
+(like taking a square root of a number, or a cosine of an angle).  Why do we need functions in SQL? Isn't 
+that what we have programming languages for? Compare how you use built-in functions in SQL with how you 
+use functions in programming languages such as C#. What's different?  If you need a function but it's not 
+built in to either SQL or a programming language, what can you do?

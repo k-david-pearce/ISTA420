@@ -1,0 +1,8 @@
+--Q3: Use Northwind. Write a query to get product list (id, name, unit price) of above average price. Use Subquery
+select productid, productname, unitprice
+from dbo.Products
+where UnitPrice >
+(select avg(UnitPrice) from dbo.Products)
+
+--This line computes the average price
+select avg(UnitPrice) from dbo.Products
